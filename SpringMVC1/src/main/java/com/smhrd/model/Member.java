@@ -6,6 +6,8 @@ import lombok.Data;
 // 테이블 먼저 생성 후에 클래스 생성하기
 // 테이블 명, 컬럼명 동일하게 해줘야함
 
+
+
 @AllArgsConstructor
 @Data
 public class Member {
