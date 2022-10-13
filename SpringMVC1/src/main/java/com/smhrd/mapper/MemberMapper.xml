@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace = " 경로 + mapper이름 "-->
+<mapper namespace="com.smhrd.mapper.MemberMapper">
+	<!-- mapper의 이름 넣어줌, 매개 인자가 있으면 파라미터타입 적어줘야함(실제 클래스가 정의된 경로까지) -->
+	<!-- 모델의 필드 이름과 똑같이 넣어줘야함 -->
+	<insert id="joinMember" parameterType="com.smhrd.model.Member">
+		insert into member value (#{id}, #{pw}, #{nick})
+	</insert>
+	
+	<select id="loginMember" parameterType="com.smhrd.model.Member" resultType="com.smhrd.model.Member">
+		select * from member where id=#{id} and pw=#{pw}	
+	</select>
+	
+	<update id="updateMember" parameterType="com.smhrd.model.Member">
+		update member set pw=#{pw}, nick=#{nick} where id=#{id}	
+	</update>
+	
+	<!-- 값이여러개면 알아서 리스트로 받아옴 따라서, 안에 있는 객체들을 어떤 타입으로 받을지 정해줘야함 -->
+	<select id="selectAllMember" resultType="com.smhrd.model.Member">
+		select * from member
+	</select>
+	
+	<delete id="deleteMember">
+		delete from member where id=#{id} 
+	</delete>
+	
+</mapper>
