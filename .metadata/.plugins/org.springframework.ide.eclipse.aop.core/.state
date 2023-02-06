@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="MessageSystem"/>
+<aop-project name="SpringMVC1"/>
+<aop-project name="BootReact"/>
+<aop-project name="SpringBook_sample"/>
+<aop-project name="BootBoard"/>
+</aop-reference-model>
